@@ -71,7 +71,7 @@ client.on('message', msg => {
   client.on('message', message => {
      if(message.content.startsWith(prefix +"bans")) {
         message.guild.fetchBans()
-        .then(bans => message.channel.send(`The ban count **${bans.size}** Person`))
+        .then(bans => message.channel.send(`**The ban count ${bans.size} Person** ⛔`))
   .catch(console.error);
 }
 });
@@ -82,7 +82,7 @@ client.on('message', message => {
                                             if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
 if (!message.member.hasPermission(['ADMINISTRATOR'])){
         message.delete()
-    return message.reply(`**No Invite Links :angry: !**`)
+    return message.reply(`**No Invite Links 😡 !**`)
     }
 }
 });
@@ -115,7 +115,7 @@ if (!message.member.hasPermission(['ADMINISTRATOR'])){
            if(!message.channel.guild) return message.reply('** This command only for servers**');
      message.member.addRole(muterole);
     const embed500 = new Discord.RichEmbed()
-.setDescription(`**  🔒 لقد تمت معاقبتك  **
+.setDescription(`**  ✅ لقد تمت معاقبتك  **
 **  بسبب نشر الروابط خيو 😏 🐸 **
 `)
             .setColor("RANDOM")
@@ -190,9 +190,9 @@ client.on("message", message => {
  if (message.content === "$help-admin") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Koinex Bot 💞 جميع الحقوق محفوظة 2019 لــبوت')
-      .setFooter('======================================================')
-      .setFooter('اوامر الادمنيه')
+      .setFooter('**© Koinex Bot 💞 جميع الحقوق محفوظة 2019 لــبوت**')
+      .setFooter('**======================================================**')
+      .setFooter('**🔱 اوامر الادمنيه**')
 	  .addField('$bc', `**لخاصية البرودكستات**`)
 	  .addField('$kick', `**لخاصية طرد**`)
 	  .addField('$ban', `**عشان تعطي احد حظر من سيرفر للابد**`)
@@ -205,7 +205,7 @@ client.on("message", message => {
 	  .addField('$warn', `**عشان تعطي احد انظار و لكي يشتغل الامر سوي روم اسمه warns**`)
                 .addField('$mutechannel', `**عشان تخلي ما فيه احد يقدر يكتب في الروم المحدد**`)
                 .addField('$unmutechannel', `**عشان ترجع الناس تقدر تكتب في الروم الي كتمته**`)
-      .setFooter('─════════════ {✯Koinex Bot✯} ════════════─')
+      .setFooter('**─════════════ {✯Koinex Bot✯} ════════════─**')
       .setFooter('#Koinex Team')
   message.author.send({embed});
  }
@@ -216,8 +216,8 @@ client.on("message", message => {
  if (message.content === "$help-public") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Koinex Bot 💞 جميع الحقوق محفوظة 2019 لــبوت')
-           .setFooter('اوامر الاعضاء')
+      .setFooter('**© Koinex Bot 💞 جميع الحقوق محفوظة 2019 لــبوت**')
+           .setFooter('**👪 اوامر الاعضاء**')
           .addField('$invite', `**لاضافة البوت الى سيرفرك**`)
 	  .addField('$roles', `**لمعرفة الرتب الي في السيرفر**`)
           .addField('$avatar', `**يجبلك الافتار حقك يعني صورة حسابك**`)
@@ -249,9 +249,9 @@ client.on("message", message => {
  if (message.content === "$help-games") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© KoinexBot 💞 جميع الحقوق محفوظة 2019 لــبوت')
-      .setFooter('======================================================')
-      .setFooter('الالعاب')
+      .setFooter('**© KoinexBot 💞 جميع الحقوق محفوظة 2019 لــبوت**')
+      .setFooter('**======================================================**')
+      .setFooter('**🎮 الالعاب**')
       .addField('$صراحة', `لعبة صراحه`)
 	  .addField('$عقاب', `لعبة عقاب`)
       .addField('$خواطر', `لعبة خواطر`)
@@ -259,7 +259,7 @@ client.on("message", message => {
 	  .addField('$كت تويت', `لعبة كت تويت`)
 	  .addField('$لو خيروك', `لعبة لو خيروك`)
           .addField('$قرعة', `لاستعمال القرعة`)
-      .setFooter('─════════════ {✯KoinexBot✯} ════════════─')
+      .setFooter('**─════════════ {✯KoinexBot✯} ════════════─**')
   message.author.send({embed});
  }
 });
@@ -348,7 +348,7 @@ client.on('message', message => {
       const embed = new Discord.RichEmbed()
 
   .setColor("#FF0000")
-  .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+  .addField('** سرعة أتصال الــبوت ** ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
                  .setFooter(` KoinexBot
  .`, 'https://cdn.discordapp.com/attachments/470360934427131964/472397610196664335/Legendry.jpg')
 
@@ -2399,8 +2399,8 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
-             Please Choose:
-─════════════ {✯KoinexBot✯} ════════════─
+             **Please Choose:**
+**─════════════ {✯KoinexBot✯} ════════════─**
 ** ❧ $help-admin ➺ ⦁ اوامر الادارة ⦁
 
 ❧ $help-public ➺ ⦁ اوامر العامة ⦁
@@ -2408,7 +2408,7 @@ client.on("message", message => {
 ❧ $help-games ➺ ⦁اوامر الالعاب ⦁
 
 ❧ $help-music ➺ ⦁اوامر الاغاني ⦁ **
-─════════════ {✯KoinexBot✯} ════════════─
+**─════════════ {✯KoinexBot✯} ════════════─**
       `)
    message.channel.sendEmbed(embed)
 
