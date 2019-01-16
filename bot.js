@@ -656,7 +656,7 @@ const Sra7a = [
  if (message.content.startsWith('$صراحه')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
-  .setTitle("لعبة صراحة ..")
+  .setTitle("**لعبة صراحة ..**")
   .setColor('RANDOM')
   .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
   .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
@@ -788,7 +788,7 @@ message.channel.sendEmbed(cat);
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL)
- .addField('لعبه كت تويت' ,
+ .addField('**لعبه كت تويت**' ,
   `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
@@ -817,7 +817,7 @@ const secreT = [
   .setColor('RANDOM')
 
    .setThumbnail(message.author.avatarURL)
- .addField('لعبه خواطر' ,
+ .addField('**لعبه خواطر**' ,
   `${secreT[Math.floor(Math.random() * secreT.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
@@ -831,12 +831,12 @@ const Love = [  "**احبك / عدد قطرات المـــطر والشجر و
 
 
  client.on('message', message => {
-   if (message.content.startsWith(".حب")) {
+   if (message.content.startsWith("$حب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL)
- .addField('LegendryBot' ,
+ .addField('KoinexBot' ,
   `${Love[Math.floor(Math.random() * Love.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
@@ -851,14 +851,14 @@ client.on('message', function(msg) {
       .setThumbnail(msg.guild.iconURL)
       .setTitle(`Showing Details Of  **${msg.guild.name}*`)
       .addField(':globe_with_meridians:** نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
-      .addField(':medal:** __الرتب__**',`[** __${msg.guild.roles.size}__ **]`,true)
-      .addField(':red_circle:**__ عدد الاعضاء__**',`[** __${msg.guild.memberCount}__ **]`,true)
-      .addField(':large_blue_circle:**__ عدد الاعضاء الاونلاين__**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
-      .addField(':pencil:**__ الرومات الكتابية__**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
-      .addField(':microphone:**__ رومات الصوت__**',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
-      .addField(':crown:**__ الأونـر__**',`**${msg.guild.owner}**`,true)
-      .addField(':id:**__ ايدي السيرفر__**',`**${msg.guild.id}**`,true)
-      .addField(':date:**__ تم عمل السيرفر في__**',msg.guild.createdAt.toLocaleString())
+      .addField(':medal:** الرتب **',`[** __${msg.guild.roles.size}__ **]`,true)
+      .addField('👪** عدد الاعضاء **',`[** __${msg.guild.memberCount}__ **]`,true)
+      .addField('💡** عدد الاعضاء الاونلاي **',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
+      .addField(':pencil:** الرومات الكتابية **',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
+      .addField('🎶** رومات الصوت  **',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
+      .addField(':crown:**  الأونـر  **',`**${msg.guild.owner}**`,true)
+      .addField(':id:** ايدي السيرفر **',`**${msg.guild.id}**`,true)
+      .addField(':date:** تم عمل السيرفر في **',msg.guild.createdAt.toLocaleString())
       msg.channel.send({embed:embed});
 	    }
   });
@@ -946,7 +946,7 @@ let args = message.content.split(" ").slice(1);
      limit: messagecount
  }).then(messages => message.channel.bulkDelete(messages));
     var embed = new Discord.RichEmbed()
-        .setTitle('تم مسح الشات بنجاح :white_check_mark: ')
+        .setTitle('**تم مسح الشات بنجاح :white_check_mark:** ')
         .setColor('RANDOM')
        message.channel.sendEmbed(embed).then(m => {
     m.delete(1000);
@@ -961,7 +961,7 @@ client.on("guildMemberAdd", function(member) {
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setAuthor(member.user.tag, member.user.avatarURL)
- .setDescription('***ولكم نورت السيرفر يا قلبي نتمني لك الاستمتاع في السيرفر***')
+ .setDescription('**ولكم نورت السيرفر يا قلبي نتمني لك الاستمتاع في السيرفر**')
 .setThumbnail(member.avatarURL)
   .setImage('https://cdn.discordapp.com/attachments/445335688628666388/477605317929336833/2Q.png')
         if (!channel) return;
@@ -979,7 +979,7 @@ client.on("guildMemberRemove", function(member) {
       const embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setAuthor(member.user.tag, member.user.avatarURL)
-      .setDescription('***باي باي شرفتنا ابقي تعال تاني***')
+      .setDescription('**باي باي شرفتنا ابقي تعال تاني**')
       .setThumbnail(member.avatarURL)
       .setImage('https://cdn.discordapp.com/attachments/445335688628666388/477604927485640714/unknown.png')
       .setTimestamp()
@@ -997,7 +997,7 @@ let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('.bcall')){
  if (message.author.id !== '373670599463272448') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
  if(!message.author.id === '373670599463272448') return;
-message.channel.sendMessage('جار ارسال الرسالة |✅')
+message.channel.sendMessage('**جار ارسال الرسالة |✅**')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
@@ -1011,7 +1011,7 @@ client.on('message', function(message) {
         var norElden = new Discord.RichEmbed()
             .setColor('RANDOM')
             .setTimestamp()
-            .setTitle('New Message On My DM !')
+            .setTitle('**New Message On My DM !**')
             .setThumbnail(`${message.author.avatarURL}`)
             .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
             .setFooter(`من (@${message.author.tag})  |  (${message.author.id})`)
