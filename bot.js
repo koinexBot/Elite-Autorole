@@ -191,19 +191,19 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setFooter('**© Koinex Bot 💞 جميع الحقوق محفوظة 2019 لــبوت**')
       .setFooter('**======================================================**')
-      .setFooter('**🔱 اوامر الادمنيه**')
-	  .addField('$bc', `**لخاصية البرودكستات**`)
-	  .addField('$kick', `**لخاصية طرد**`)
-	  .addField('$ban', `**عشان تعطي احد حظر من سيرفر للابد**`)
-	  .addField('$unban', `**لفك الحظر من احد**`)
-	  .addField('$bans', `**عشان تشوف عدد المبندين في السيرفر**`)
-	  .addField('$clear', `**لخاصية حذف شات**`)
-          .addField('$mute', `**لاعطاء احد ميوت يعني تجعله ما يقدر يرسل ولا شئ للابد** `)
-          .addField('$unmute', `*لفك الميوت عن شخص** `)
-          .addField('$report', `**عشان تبلغ عن شخص**`)
-	  .addField('$warn', `**عشان تعطي احد انظار و لكي يشتغل الامر سوي روم اسمه warns**`)
-                .addField('$mutechannel', `**عشان تخلي ما فيه احد يقدر يكتب في الروم المحدد**`)
-                .addField('$unmutechannel', `**عشان ترجع الناس تقدر تكتب في الروم الي كتمته**`)
+      .setFooter('**Admins Commands 🔗**')
+	  .addField('$bc', `**BroadCast Command**`)
+	  .addField('$kick', `**For Kicking Members from The Server**`)
+	  .addField('$ban', `**Ban Any Member from The Server Forever**`)
+	  .addField('$unban', `**To Unlock ban from members**`)
+	  .addField('$bans', `**See how much members banned from the server**`)
+	  .addField('$clear', `**To delete everything in the chat**`)
+          .addField('$mute', `**To give any one mute** `)
+          .addField('$unmute', `**Unlock mute from members** `)
+          .addField('$report', `**To report someone that breaking ruls**`)
+	  .addField('$warn', `**Give warns to Members that breaking ruls**`)
+                .addField('$mutechannel', `**This Command used to close the chat**`)
+                .addField('$unmutechannel', `**This Command Used To open the chat**`)
       .setFooter('**─════════════ {✯Koinex Bot✯} ════════════─**')
       .setFooter('#Koinex Team')
   message.author.send({embed});
@@ -216,52 +216,32 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setFooter('**© Koinex Bot 💞 جميع الحقوق محفوظة 2019 لــبوت**')
-           .setFooter('**👪 اوامر الاعضاء**')
-          .addField('$invite', `**لاضافة البوت الى سيرفرك**`)
-	  .addField('$roles', `**لمعرفة الرتب الي في السيرفر**`)
-          .addField('$avatar', `**يجبلك الافتار حقك يعني صورة حسابك**`)
-	  .addField('$server', `**يجبلك معلومات السيرفر**`)
-	  .addField('$id', `**يجبلك الملف الشخصي حقك**`)
-	 	  .addField('$servers', `**يجبلك عدد السيرفرات التي البوت داخله**`)
-	  .addField('$embed', `**البوت يكرر الكلام الي انت تقوله بامبد**`)
-	  .addField('$say', `**البوت يكرر الكلام الي انت تقوله بدون امبد**`)
-	  .addField('$ping', `**يقلك كم بنق البوت**`)
-          .addField('$support', `**سيرفر الدعم حق البوت**`)
-	  .addField('$image', `**يعرض صورة سيرفر**`)
-	  .addField('$members', `**حاله الاعضاء**`)
-          .addField('$owner', `**لارسال رسالة لاونر سيرفر**`)
-          .addField('$suggest', `**لاقتراح شئ و لازم يكون فيه روم اسمه suggestions** `)
-          .addField('$uptime', `**عشان تشوف البوت شغال من متى**`)
-          .addField('$botinfo', `**عشان تعرف معلومات البوت**`)
-          .addField('$color', `**عشان تغير لونك ولازم يكون فيه رتب باسم الالوان حقة القلوب الي في صورة الامر اسماء الالوان احمر red اصفر yellow بنفسجي y2 ازرق لبني y3 اخضر y1 اسود black**`)
-          .addField('$contact', `**لارسال رسالة لصاحب البوت**`)
+           .setFooter('**Public Commands 👪**')
+          .addField('$invite', `**To invite bot to your server**`)
+	  .addField('$roles', `**This command show you all the roles of the server*`)
+          .addField('$avatar', `**This command help you to get any members Profile pic**`)
+	  .addField('$server', `**This command show you the state of your server**`)
+	  .addField('$id', `**This command show you everything about your Discord account**`)
+	 	  .addField('$servers',`**This command Show you number of the server that support our bot**`)
+	  .addField('$embed', `**This command make the bot repeat anything you say**`)
+	  .addField('$say', `**This command make the bot repeat anything you say without embed**`)
+	  .addField('$ping', `**This command show you ping of our bot**`)
+          .addField('$support', `**This Command send you our support server**`)
+	  .addField('$image', `**This Command give you any server picture**`)
+	  .addField('$members', `**This command show you how many members in the server**`)
+          .addField('$owner', `**This command used to see who is the owner of the bot**`)
+          .addField('$suggest', `**This command help server that need suggestions of the members ( make room name suggestions ** `)
+          .addField('$uptime', `**This command Help you to see since the bot was online**`)
+          .addField('$botinfo', `**This command to see our bot Info**`)
+          .addField('$color', `**This command to change your color** `)
+          .addField('$contact', `**To contact the bot owner**`)
       .setFooter('─════════════ {✯KoinexBot✯} ════════════─')
-      .setFooter('انهيت الصيانة على البوت و بس')
-	  .addField('$cat', `يجبلك صورة قطة`)
+      .setFooter('Koinex Team')
+	  .addField('$cat', `This command for fun show you some cats pic`)
   message.author.send({embed});
  }
 });
-
-
-
-client.on("message", message => {
- if (message.content === "$help-games") {
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setFooter('**© KoinexBot 💞 جميع الحقوق محفوظة 2019 لــبوت**')
-      .setFooter('**======================================================**')
-      .setFooter('**🎮 الالعاب**')
-      .addField('$صراحة', `لعبة صراحه`)
-	  .addField('$عقاب', `لعبة عقاب`)
-      .addField('$خواطر', `لعبة خواطر`)
-	  .addField('$حب', `لعبة الحب`)
-	  .addField('$كت تويت', `لعبة كت تويت`)
-	  .addField('$لو خيروك', `لعبة لو خيروك`)
-          .addField('$قرعة', `لاستعمال القرعة`)
-      .setFooter('**─════════════ {✯KoinexBot✯} ════════════─**')
-  message.author.send({embed});
- }
-});
+	
 
 
    client.on('message', message => {
@@ -347,7 +327,7 @@ client.on('message', message => {
       const embed = new Discord.RichEmbed()
 
   .setColor("#FF0000")
-  .addField('** سرعة أتصال الــبوت ** ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+  .addField('** Bot Ping Is : ** ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
                  .setFooter(` KoinexBot
  .`, 'https://cdn.discordapp.com/attachments/470360934427131964/472397610196664335/Legendry.jpg')
 
@@ -408,10 +388,10 @@ client.on('message', message => {
   let reason = message.content.split(" ").slice(2).join(" ");
   /*let b5bzlog = client.channels.find("name", "5bz-log");
   if(!b5bzlog) return message.reply("I've detected that this server doesn't have a 5bz-log text channel.");*/
-  if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
-  if(!reason) return message.reply ("**اكتب سبب الطرد**");
+  if (message.mentions.users.size < 1) return message.reply("**Mention The Person**");
+  if(!reason) return message.reply ("**Type The reason **");
   if (!message.guild.member(user)
-  .kickable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+  .kickable) return message.reply("**i cant ban this Person cause his rank is higher then me 😞**");
 
   message.guild.member(user).kick();
 
@@ -448,10 +428,10 @@ client.on('message', message => {
   let reason = message.content.split(" ").slice(2).join(" ");
   /*let b5bzlog = client.channels.find("name", "5bz-log");
   if(!b5bzlog) return message.reply("I've detected that this server doesn't have a 5bz-log text channel.");*/
-  if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
-  if(!reason) return message.reply ("**اكتب سبب الطرد**");
+  if (message.mentions.users.size < 1) return message.reply("**Mention The Person*");
+  if(!reason) return message.reply ("**Type the reason**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+  .bannable) return message.reply("**icant ban this Persone cause his rank is higher then me 😞**");
 
   message.guild.member(user).ban(7, user);
 
@@ -479,41 +459,41 @@ if (!message.content.startsWith(prefix)) return;
 	let args = message.content.split(" ").slice(1);
 	if (command == "mute") {
 		if (!message.channel.guild) return;
-		if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("انت لا تملك صلاحيات !! ").then(msg => msg.delete(5000));
-		if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("البوت لايملك صلاحيات ").then(msg => msg.delete(5000));;
+		if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("**You dont have permission!! **").then(msg => msg.delete(5000));
+		if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("**Bot need The permission !**").then(msg => msg.delete(5000));;
 		let user = message.mentions.users.first();
 		let muteRole = message.guild.roles.find("name", "Muted");
-		if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **").then(msg => {msg.delete(5000)});
-		if (message.mentions.users.size < 1) return message.reply('** يجب عليك المنشن اولاً **').then(msg => {msg.delete(5000)});
+		if (!muteRole) return message.reply("** i cant find Muted Rank 'Muted' **").then(msg => {msg.delete(5000)});
+		if (message.mentions.users.size < 1) return message.reply('**Mention The Persone First !**').then(msg => {msg.delete(5000)});
 		let reason = message.content.split(" ").slice(2).join(" ");
 		message.guild.member(user).addRole(muteRole);
 		const muteembed = new Discord.RichEmbed()
 		.setColor("RANDOM")
 		.setAuthor(`Muted!`, user.displayAvatarURL)
 		.setThumbnail(user.displayAvatarURL)
-		.addField("**:busts_in_silhouette:  المستخدم**",  '**[ ' + `${user.tag}` + ' ]**',true)
-		.addField("**:hammer:  تم بواسطة **", '**[ ' + `${message.author.tag}` + ' ]**',true)
-		.addField("**:book:  السبب**", '**[ ' + `${reason}` + ' ]**',true)
+		.addField("**:busts_in_silhouette:  Member**",  '**[ ' + `${user.tag}` + ' ]**',true)
+		.addField("**:hammer:  By **", '**[ ' + `${message.author.tag}` + ' ]**',true)
+		.addField("**:book:  Reason**", '**[ ' + `${reason}` + ' ]**',true)
 		.addField("User", user, true)
 		message.channel.send({embed : muteembed});
 		var muteembeddm = new Discord.RichEmbed()
 		.setAuthor(`Muted!`, user.displayAvatarURL)
 		.setDescription(`
-${user} انت معاقب بميوت كتابي بسبب مخالفة القوانين
-${message.author.tag} تمت معاقبتك بواسطة
-[ ${reason} ] : السبب
-اذا كانت العقوبة عن طريق الخطأ تكلم مع المسؤلين
+${user} You are muted cause of breaking ruls !
+${message.author.tag} By
+[ ${reason} ] : reason
+If you think this is false punishment please contact staff members
 `)
-		.setFooter(`في سيرفر : ${message.guild.name}`)
+		.setFooter(`Server : ${message.guild.name}`)
 		.setColor("RANDOM")
 	user.send( muteembeddm);
   }
 if(command === `unmute`) {
-  if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.sendMessage("**ليس لديك صلاحية لفك عن الشخص ميوت**:x: ").then(m => m.delete(5000));
+  if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.sendMessage("**You dont have permission to unlock this mute ❌").then(m => m.delete(5000));
 if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("**I Don't Have `MANAGE_ROLES` Permission**").then(msg => msg.delete(6000))
 
   let toMute = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-  if(!toMute) return message.channel.sendMessage("❌**عليك المنشن أولاّ** ");
+  if(!toMute) return message.channel.sendMessage("❌**Mention First** ");
 
   let role = message.guild.roles.find (r => r.name === "Muted");
 
