@@ -2259,7 +2259,7 @@ client.on('message', message => {
             .addField('**Channels 📝**' , `[ ${client.channels.size} ]` , true)
             .addField('**Bot Ping 💡**' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('**Bot ID 🆔**' , `[ ${client.user.id} ]` , true)
-                  .addField('**Bot Prefix :robot: **' , `.` , true)
+                  .addField('**Bot Prefix :robot: **' , `$` , true)
                   .addField('**Bot Language 🔗**' , `[ Java Script ]` , true)
                   .setFooter('Created By | #KoinexBot')
     })
