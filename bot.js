@@ -19,14 +19,14 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === 'السلام عليكم') {
-        message.reply('**و عليكم السلام**');
+    if (message.content === 'fuck') {
+        message.reply('**Plz Dont Repeat it 😅**');
       }
 });
 
 client.on('message', message => {
-    if (message.content === 'سلام عليكم') {
-        message.reply('**و عليكم السلام**');
+    if (message.content === 'fuck') {
+        message.reply('**Plz Dont Repeat it 😅**');
       }
 });
 
@@ -53,16 +53,15 @@ client.on('message', msg => {
         if (msg.content.startsWith(`$warn`)) {
           if(!msg.member.hasPermission("MANAGE_MESSAGES")) return;
            let args = msg.content.split(" ").slice(1);
-          if (!msg.mentions.members.first()) return msg.reply('**😀 منشن الشخص المحدد**')
-          if (!args[1]) return msg.reply('``اكتب السبب``')
+          if (!msg.mentions.members.first()) return msg.reply('**Mention The Person 👦**')
+          if (!args[1]) return msg.reply('** Type The Reason **')
           //غير اسم الروم او سوي روم بذا الاسم
           if (msg.guild.channels.find('name', 'warns')) {
             //اذا غيرت فوق غير هنا كمان
-            msg.guild.channels.find('name', 'warns').send(`
-          تم اعطائك تنبيه : ${msg.mentions.members.first()}
-          لأنك قمت بما يلي
+            msg.guild.channels.find('name', 'warns').send(`**
+          You Get Warn Cause of : ${msg.mentions.members.first()}
           ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
-          `)
+          **`)
           }
         }
 })
@@ -115,8 +114,8 @@ if (!message.member.hasPermission(['ADMINISTRATOR'])){
            if(!message.channel.guild) return message.reply('** This command only for servers**');
      message.member.addRole(muterole);
     const embed500 = new Discord.RichEmbed()
-.setDescription(`**  ✅ لقد تمت معاقبتك  **
-**  بسبب نشر الروابط خيو 😏 🐸 **
+.setDescription(`**  ✅ He was punished  **
+**  Cause Of Sharing Server Link 😏 🐸 **
 `)
             .setColor("RANDOM")
             .setThumbnail(`${message.author.avatarURL}`)
@@ -143,9 +142,9 @@ client.on('message', function(message) {
     .addField("**# - Reason:**",messageReason,true)
     .addField("**# - Channel:**",message.channel,true)
     .addField("**# - Time:**",message.createdAt,true)
-    .setFooter("لو ان الابلاغ فيه مزح راح يتعرض صاحب الابلاغ لقوبات")
+    .setFooter("If This Report Was Joke You Will Be Blacklisted From The Server ")	      
 message.channel.send(Rembed)
-message.channel.send("__Are you sure you want to send this to the Server owner??__").then(msg => {
+message.channel.send("**Are you sure you want to send this to the Server owner??**😕").then(msg => {
     msg.react("✅")
     msg.react("❌")
 .then(() => msg.react('❌'))
