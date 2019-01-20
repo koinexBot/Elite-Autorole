@@ -191,8 +191,7 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setFooter('**© Koinex Bot 💞 **')
       .setFooter('**======================================================**')
-      .setFooter('**Admins Commands 🔗**')
-	  .addField('$bc', `**BroadCast Command**`)
+      .setFooter('**Admins Commands 🔗**')	
 	  .addField('$kick', `**For Kicking Members from The Server**`)
 	  .addField('$ban', `**Ban Any Member from The Server Forever**`)
 	  .addField('$unban', `**To Unlock ban from members**`)
@@ -527,47 +526,6 @@ client.on('message' , message => {
     }
 });
 
-
-client.on('message', message => {
-  if(!message.channel.guild) return;
-if(message.content.startsWith('$bc')) {
-if(!message.channel.guild) return message.channel.send('** This Command only for servers ⛔**').then(m => m.delete(5000));
-if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**You Dont have `ADMINISTRATOR` Permission** ⛔' );
-let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "KoinexBot";
-let request = `Requested By ${message.author.username}`;
-if (!args) return message.reply('**You Need to type somthing for the broadcast !**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
-msg.react('✅')
-.then(() => msg.react('❌'))
-.then(() =>msg.react('✅'))
-
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
-let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
-reaction1.on("collect", r => {
-message.channel.send(`☑ | Done ... The Broadcast Message Has Been Sent For ${message.guild.members.size} Members`).then(m => m.delete(5000));
-message.guild.members.forEach(m => {
-var bc = new
-Discord.RichEmbed()
-.setColor('RANDOM')
-.setTitle('Broadcast')
-.addField('Server', message.guild.name)
-.addField('Sender', message.author.username)
-.addField('Message', args)
-.setThumbnail(message.author.avatarURL)
-.setFooter(copy, client.user.avatarURL);
-m.send({ embed: bc })
-msg.delete();
-})
-})
-reaction2.on("collect", r => {
-message.channel.send(`**Broadcast Canceled.**`).then(m => m.delete(5000));
-msg.delete();
-})
-})
-}
-});
 
 
 
