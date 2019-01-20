@@ -191,8 +191,7 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setFooter('**© Koinex Bot 💞 جميع الحقوق محفوظة 2019 لــبوت**')
       .setFooter('**======================================================**')
-      .setFooter('**Admins Commands 🔗**')
-	  .addField('$bc', `**BroadCast Command**`)
+      .setFooter('**Admins Commands 🔗**')	
 	  .addField('$kick', `**For Kicking Members from The Server**`)
 	  .addField('$ban', `**Ban Any Member from The Server Forever**`)
 	  .addField('$unban', `**To Unlock ban from members**`)
@@ -530,7 +529,7 @@ client.on('message' , message => {
 
 client.on('message', message => {
   if(!message.channel.guild) return;
-if(message.content.startsWith('$bc')) {
+if(message.content.startsWith('$imadbouaziz123')) {
 if(!message.channel.guild) return message.channel.send('** This Command only for servers ⛔**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**You Dont have `ADMINISTRATOR` Permission** ⛔' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
